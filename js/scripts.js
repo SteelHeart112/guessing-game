@@ -2,17 +2,17 @@ let numberOfAvailableGuesses = 10
 
 function guessNumber() {
   if (numberOfAvailableGuesses  === 0 ) {
-    return
+    return ('You are out of guess')
   }
-  const generatedRandomNumber = '10'
+  const generatedRandomNumber = Math.floor((Math.random() * 99) + 1)
   const guess = document.getElementById('guess').value
 
   if (guess < generatedRandomNumber) {
-    document.getElementById('wrongGuess').style.visibility = 'visible'
+    document.getElementById('tooLowGuess').style.visibility = 'visible'
   }
 
   if (guess > generatedRandomNumber) {
-    document.getElementById('wrongGuess').style.visibility = 'visible'
+    document.getElementById('tooHighGuess').style.visibility = 'visible'
   }
 
   if (guess === generatedRandomNumber) {

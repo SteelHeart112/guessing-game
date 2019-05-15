@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
+  <title>The Guessing Game</title>
+  <meta name="description" content="The Guessing Game">
   <meta name="author" content="SitePoint">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
@@ -14,21 +14,26 @@
 </head>
 
 <body>
+    <h1>Input your number</h1>
     <input type="text" id="guess"/>
-    <h1 id="numberOfRemainingGuesses">10</h1>
+    <h2>Guesses Remaining</h2>
+    <h3 id="numberOfRemainingGuesses">10</h3>
     <button onclick="guessNumber()">
         Guess!
     </button>
 
-    <div class="alert alert-danger" role="alert" style="visibility: hidden" id="wrongGuess">
-        Your guess was wrong!
+    <div class="alert alert-danger" role="alert" style="visibility: hidden" id="tooLowGuess">
+      Your guess was too low!
+  </div>
+    <div class="alert alert-danger" role="alert" style="visibility: hidden" id="tooHighGuess">
+        Your guess was too high!
     </div>
 
     <div class="alert alert-success" role="alert" style="visibility: hidden" id="correctGuess">
-            You're Correct! You guessed, correctly!
+            You guessed correctly!
     </div>
     <button onclick="resetGame()">
-        Reset Game!
+        Start Over!
     </button>
 
   <script src="js/scripts.js"></script>
